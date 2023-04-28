@@ -2,5 +2,4 @@
 # Get process information using ps command and store it in a variable
 
 process_info=$(ps aux --forest)
-echo "User         PID  %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND"
 echo "$process_info"
