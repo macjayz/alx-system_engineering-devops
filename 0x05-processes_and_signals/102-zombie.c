@@ -31,7 +31,6 @@ int main(void)
 		child = fork();
 		if (!child)
 		{
-			// Child process
 			printf("Child process created, PID: %d\n", getpid());
 			exit(0);
 		}
