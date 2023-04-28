@@ -1,15 +1,4 @@
 #!/usr/bin/env bash
 # this displays the PID, along with the process name
 
-for pid in /proc/*/; do
-    pid=${pid%*/}
-    pid=${pid##*/}
-
-    if [[ -f /proc/$pid/cmdline ]]; then
-        cmdline=$(tr '\0' ' ' < /proc/$pid/cmdline)
-        if [[ $cmdline =~ bash ]]; then
-            echo "PID: $pid Process Name: $cmdline"
-        fi
-    fi
-done
-
+pgrep -l bash
